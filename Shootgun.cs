@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class Shootgun : Weapon
 {
-    [SerializeField] private Bullet[] _bullet;
-
     public override void Shoot(Transform shootPoint)
     {
-        for (int i = 0; i < _bullet.Length; i++)
+        for (int i = 0; i < Bullet.Length; i++)
         {
-            Instantiate(_bullet[i], shootPoint.position, _bullet[i].transform.rotation);
+            Instantiate(Bullet[i], shootPoint.position, Bullet[i].transform.rotation);
         }
     }
 }
